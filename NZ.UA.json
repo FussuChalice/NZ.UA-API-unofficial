@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6beb28f8-4e41-469e-9e4a-159309cf0514",
+		"_postman_id": "64b86869-82e3-45cd-91e7-2ee74e87e9a3",
 		"name": "NZ.UA",
 		"description": "**nz.ua** is a platform that provides electronic class journals and diaries with features for remote learning.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -293,6 +293,80 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"dates\": [\n    {\n      \"date\": \"2024-01-12\",\n      \"calls\": [\n        {\n          \"call_id\": 9004044,\n          \"call_number\": 1,\n          \"subjects\": [\n            {\n              \"lesson\": [\n                {\n                  \"type\": \"Поточна\",\n                  \"mark\": \"\",\n                  \"comment\": \"\"\n                }\n              ],\n              \"hometask\": [\n                \"Опрацювати тему 2 (Громадянське суспільство). Усно відповісти на запитання.\\r\\nТема: Громада. Поняття громади. Роль громади в житті людини, суспільства, держави. Реалізація та захист громадою своїх прав і законних інтересів. Вплив громадян на вирішення проблем громади.\"\n              ],\n              \"distance_hometask_id\": null,\n              \"distance_hometask_is_closed\": null,\n              \"subject_name\": \"Громадянська освіта\",\n              \"room\": \"кабінет історії[203]\"\n            }\n          ]\n        }\n      ],\n      \"error_message\": \"\"\n    }\n  ]\n}"
+				}
+			]
+		},
+		{
+			"name": "subject-grades",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Your acces_token from login ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"end_date\": \"2024-04-30\",\n    \"start_date\": \"2024-04-01\",\n    \"student_id\": 99999999,\n    \"subject_id\": 99999999\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/v1/schedule/subject-grades",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v1",
+						"schedule",
+						"subject-grades"
+					]
+				},
+				"description": "Get grades by subject id and student id"
+			},
+			"response": [
+				{
+					"name": "subject-grades",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"end_date\": \"2024-04-30\",\n    \"start_date\": \"2024-04-01\",\n    \"student_id\": 99999999,\n    \"subject_id\": 99999999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-mobile.nz.ua/v1/schedule/subject-grades",
+							"protocol": "https",
+							"host": [
+								"api-mobile",
+								"nz",
+								"ua"
+							],
+							"path": [
+								"v1",
+								"schedule",
+								"subject-grades"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"error_message\": \"\",\n    \"lessons\": [\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-30\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"9\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-30\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Зошит\",\n            \"mark\": \"7\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-30\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"10\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-25\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Тематична\",\n            \"mark\": \"10\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-25\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Контрольна робота\",\n            \"mark\": \"10\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-19\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"11\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-17\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"7\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-11\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"11\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-09\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Тематична\",\n            \"mark\": \"10\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-09\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Контрольна робота\",\n            \"mark\": \"11\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-05\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"8\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-02\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"11\",\n            \"subject\": \"Алгебра\"\n        }\n    ],\n    \"number_missed_lessons\": 0\n}"
 				}
 			]
 		}

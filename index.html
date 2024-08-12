@@ -167,6 +167,10 @@ pre code {
             <a href="#request-diary">diary</a>
         </li>
         
+        <li>
+            <a href="#request-subject-grades">subject-grades</a>
+        </li>
+        
         
     </ul>
 </div>
@@ -238,7 +242,7 @@ Accept-Charset: utf-8, *;q=0.8
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-authorization-responses-eac1186a-3581-41df-8284-3bb3a0de8eaa" data-toggle="tab">
+                                <a href="#request-authorization-responses-906c8c11-849b-4771-ad54-6140ae370ebc" data-toggle="tab">
                                     
                                     Response
                                     
@@ -248,7 +252,7 @@ Accept-Charset: utf-8, *;q=0.8
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-authorization-responses-eac1186a-3581-41df-8284-3bb3a0de8eaa">
+                            <div class="tab-pane active" id="request-authorization-responses-906c8c11-849b-4771-ad54-6140ae370ebc">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -331,7 +335,7 @@ Host:
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-student-performance-responses-d0c0ec4d-fcec-4389-ab64-d448d020a861" data-toggle="tab">
+                                <a href="#request-student-performance-responses-d8d4d10e-1390-4fbc-ae73-1b036e6f5740" data-toggle="tab">
                                     
                                     Response
                                     
@@ -341,7 +345,7 @@ Host:
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-student-performance-responses-d0c0ec4d-fcec-4389-ab64-d448d020a861">
+                            <div class="tab-pane active" id="request-student-performance-responses-d8d4d10e-1390-4fbc-ae73-1b036e6f5740">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -597,7 +601,7 @@ Content-Type: application/json
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-diary-responses-87aeae21-3a9d-4fb7-9ae8-780beb014efd" data-toggle="tab">
+                                <a href="#request-diary-responses-054098a3-83fe-4d1f-a938-9811b054deeb" data-toggle="tab">
                                     
                                     Response
                                     
@@ -607,7 +611,7 @@ Content-Type: application/json
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-diary-responses-87aeae21-3a9d-4fb7-9ae8-780beb014efd">
+                            <div class="tab-pane active" id="request-diary-responses-054098a3-83fe-4d1f-a938-9811b054deeb">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -647,6 +651,182 @@ Content-Type: application/json
             "error_message": ""
         }
     ]
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-subject-grades">
+                        subject-grades
+                        <a href="#request-subject-grades"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div><p>Get grades by subject id and student id</p>
+</div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-subject-grades-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-subject-grades-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-subject-grades-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -d '{
+    "end_date": "2024-04-30",
+    "start_date": "2024-04-01",
+    "student_id": 99999999,
+    "subject_id": 99999999
+}' "{{base_url}}/v1/schedule/subject-grades"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-subject-grades-example-http">
+                                <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/v1/schedule/subject-grades HTTP/1.1
+Host: 
+
+{
+    "end_date": "2024-04-30",
+    "start_date": "2024-04-01",
+    "student_id": 99999999,
+    "subject_id": 99999999
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-subject-grades-responses-6e231323-3a07-4322-a59c-a493b0415644" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-subject-grades-responses-6e231323-3a07-4322-a59c-a493b0415644">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "error_message": "",
+    "lessons": [
+        {
+            "comment": "",
+            "lesson_date": "2024-04-30",
+            "lesson_id": "99999999",
+            "lesson_type": "Поточна",
+            "mark": "9",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-30",
+            "lesson_id": "99999999",
+            "lesson_type": "Зошит",
+            "mark": "7",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-30",
+            "lesson_id": "99999999",
+            "lesson_type": "Поточна",
+            "mark": "10",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-25",
+            "lesson_id": "99999999",
+            "lesson_type": "Тематична",
+            "mark": "10",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-25",
+            "lesson_id": "99999999",
+            "lesson_type": "Контрольна робота",
+            "mark": "10",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-19",
+            "lesson_id": "99999999",
+            "lesson_type": "Поточна",
+            "mark": "11",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-17",
+            "lesson_id": "99999999",
+            "lesson_type": "Поточна",
+            "mark": "7",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-11",
+            "lesson_id": "99999999",
+            "lesson_type": "Поточна",
+            "mark": "11",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-09",
+            "lesson_id": "99999999",
+            "lesson_type": "Тематична",
+            "mark": "10",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-09",
+            "lesson_id": "99999999",
+            "lesson_type": "Контрольна робота",
+            "mark": "11",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-05",
+            "lesson_id": "99999999",
+            "lesson_type": "Поточна",
+            "mark": "8",
+            "subject": "Алгебра"
+        },
+        {
+            "comment": "",
+            "lesson_date": "2024-04-02",
+            "lesson_id": "99999999",
+            "lesson_type": "Поточна",
+            "mark": "11",
+            "subject": "Алгебра"
+        }
+    ],
+    "number_missed_lessons": 0
 }</code></pre>
                                     </td></tr>
                                     
