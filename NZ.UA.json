@@ -381,6 +381,164 @@
 					"body": "{\n    \"error_message\": \"\",\n    \"lessons\": [\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-30\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"9\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-30\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Зошит\",\n            \"mark\": \"7\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-30\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"10\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-25\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Тематична\",\n            \"mark\": \"10\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-25\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Контрольна робота\",\n            \"mark\": \"10\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-19\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"11\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-17\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"7\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-11\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"11\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-09\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Тематична\",\n            \"mark\": \"10\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-09\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Контрольна робота\",\n            \"mark\": \"11\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-05\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"8\",\n            \"subject\": \"Алгебра\"\n        },\n        {\n            \"comment\": \"\",\n            \"lesson_date\": \"2024-04-02\",\n            \"lesson_id\": \"99999999\",\n            \"lesson_type\": \"Поточна\",\n            \"mark\": \"11\",\n            \"subject\": \"Алгебра\"\n        }\n    ],\n    \"number_missed_lessons\": 0\n}"
 				}
 			]
+		},
+		{
+			"name": "missed-lessons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Your acces_token from login ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"end_date\": \"2024-01-31\",\n    \"start_date\": \"2024-01-01\",\n    \"student_id\": 99999999 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-mobile.nz.ua/v1/schedule/missed-lessons",
+					"protocol": "https",
+					"host": [
+						"api-mobile",
+						"nz",
+						"ua"
+					],
+					"path": [
+						"v1",
+						"schedule",
+						"missed-lessons"
+					]
+				},
+				"description": "Get missed lessons info"
+			},
+			"response": [
+				{
+					"name": "missed-lessons",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"end_date\": \"2024-01-31\",\n    \"start_date\": \"2024-01-01\",\n    \"student_id\": 99999999 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-mobile.nz.ua/v1/schedule/missed-lessons",
+							"protocol": "https",
+							"host": [
+								"api-mobile",
+								"nz",
+								"ua"
+							],
+							"path": [
+								"v1",
+								"schedule",
+								"missed-lessons"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error_message\": \"\",\n    \"missed_lessons\": [\n        {\n            \"lesson_date\": \"2024-01-31\",\n            \"lesson_id\": \"23906864\",\n            \"lesson_number\": \"6\",\n            \"subject\": \"Фізична культура\"\n        },\n        {\n            \"lesson_date\": \"2024-01-09\",\n            \"lesson_id\": \"22019392\",\n            \"lesson_number\": \"8\",\n            \"subject\": \"Захист України\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "timetable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"end_date\": \"2024-05-19\",\n    \"start_date\": \"2024-05-13\",\n    \"student_id\": 99999999\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-mobile.nz.ua/v1/schedule/timetable",
+					"protocol": "https",
+					"host": [
+						"api-mobile",
+						"nz",
+						"ua"
+					],
+					"path": [
+						"v1",
+						"schedule",
+						"timetable"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "timetable",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"end_date\": \"2024-05-19\",\n    \"start_date\": \"2024-05-13\",\n    \"student_id\": 99999999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-mobile.nz.ua/v1/schedule/timetable",
+							"protocol": "https",
+							"host": [
+								"api-mobile",
+								"nz",
+								"ua"
+							],
+							"path": [
+								"v1",
+								"schedule",
+								"timetable"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dates\": [\n        {\n            \"calls\": [\n                {\n                    \"call_id\": 9004044,\n                    \"call_number\": 1,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет математики[305]\",\n                            \"subject_name\": \"Геометрія\",\n                            \"teacher\": {\n                                \"id\": 1755079,\n                                \"name\": \"Іванова А. С.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"8:40\",\n                    \"time_start\": \"8:00\"\n                },\n                {\n                    \"call_id\": 9004045,\n                    \"call_number\": 2,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет української мови та літератури[301]\",\n                            \"subject_name\": \"Українська мова \",\n                            \"teacher\": {\n                                \"id\": 1755119,\n                                \"name\": \"Петрова О. М.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"9:30\",\n                    \"time_start\": \"8:50\"\n                },\n                {\n                    \"call_id\": 9004042,\n                    \"call_number\": 3,\n                    \"subjects\": [\n                        {\n                            \"room\": \"зарубіжної літератури[302а]\",\n                            \"subject_name\": \"Зарубіжна література\",\n                            \"teacher\": {\n                                \"id\": 1755014,\n                                \"name\": \"Сидорова Н. М.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"10:20\",\n                    \"time_start\": \"9:40\"\n                },\n                {\n                    \"call_id\": 9004043,\n                    \"call_number\": 4,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет української мови та літератури[301]\",\n                            \"subject_name\": \"Українська  література\",\n                            \"teacher\": {\n                                \"id\": 1755119,\n                                \"name\": \"Петрова О. М.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"12:00\",\n                    \"time_start\": \"11:20\"\n                },\n                {\n                    \"call_id\": 9004047,\n                    \"call_number\": 6,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет фізики[206]\",\n                            \"subject_name\": \"Фізика і астрономія\",\n                            \"teacher\": {\n                                \"id\": 1754964,\n                                \"name\": \"Кузнецова О. О.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"13:40\",\n                    \"time_start\": \"13:00\"\n                },\n                {\n                    \"call_id\": 9004048,\n                    \"call_number\": 7,\n                    \"subjects\": [\n                        {\n                            \"room\": \"зарубіжної літератури[302а]\",\n                            \"subject_name\": \"Мистецтво \",\n                            \"teacher\": {\n                                \"id\": 1755014,\n                                \"name\": \"Сидорова Н. М.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"14:30\",\n                    \"time_start\": \"13:50\"\n                },\n                {\n                    \"call_id\": 9004059,\n                    \"call_number\": 10,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет біології[208]\",\n                            \"subject_name\": \"Виховна робота\",\n                            \"teacher\": {\n                                \"id\": 1755009,\n                                \"name\": \"Федорова В. П.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"17:00\",\n                    \"time_start\": \"16:20\"\n                }\n            ],\n            \"date\": \"2024-05-13\"\n        },\n        {\n            \"calls\": [\n                {\n                    \"call_id\": 9004044,\n                    \"call_number\": 1,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет математики[305]\",\n                            \"subject_name\": \"Алгебра\",\n                            \"teacher\": {\n                                \"id\": 1755079,\n                                \"name\": \"Іванова А. С.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"8:40\",\n                    \"time_start\": \"8:00\"\n                },\n                {\n                    \"call_id\": 9004045,\n                    \"call_number\": 2,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет історії[203]\",\n                            \"subject_name\": \"Історія України\",\n                            \"teacher\": {\n                                \"id\": 1754999,\n                                \"name\": \"Соколова Л. С.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"9:30\",\n                    \"time_start\": \"8:50\"\n                },\n                {\n                    \"call_id\": 9004042,\n                    \"call_number\": 3,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет математики[305]\",\n                            \"subject_name\": \"Алгебра\",\n                            \"teacher\": {\n                                \"id\": 1755079,\n                                \"name\": \"Іванова А. С.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"10:20\",\n                    \"time_start\": \"9:40\"\n                },\n                {\n                    \"call_id\": 9004043,\n                    \"call_number\": 4,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет математики[305]\",\n                            \"subject_name\": \"Геометрія\",\n                            \"teacher\": {\n                                \"id\": 1755079,\n                                \"name\": \"Іванова А. С.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"12:00\",\n                    \"time_start\": \"11:20\"\n                },\n                {\n                    \"call_id\": 9004046,\n                    \"call_number\": 5,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет історії[203]\",\n                            \"subject_name\": \"Громадянська освіта\",\n                            \"teacher\": {\n                                \"id\": 1754999,\n                                \"name\": \"Соколова Л. С.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"12:50\",\n                    \"time_start\": \"12:10\"\n                },\n                {\n                    \"call_id\": 9004047,\n                    \"call_number\": 6,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет географії[306]\",\n                            \"subject_name\": \"Географія\",\n                            \"teacher\": {\n                                \"id\": 5530201,\n                                \"name\": \"Новикова С. І.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"13:40\",\n                    \"time_start\": \"13:00\"\n                },\n                {\n                    \"call_id\": 9004048,\n                    \"call_number\": 7,\n                    \"subjects\": [\n                        {\n                            \"room\": \"спортивна зала[1]\",\n                            \"subject_name\": \"Фізична культура\",\n                            \"teacher\": {\n                                \"id\": 5392214,\n                                \"name\": \"Большой М. І.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"14:30\",\n                    \"time_start\": \"13:50\"\n                }\n            ],\n            \"date\": \"2024-05-14\"\n        },\n        {\n            \"calls\": [\n                {\n                    \"call_id\": 9004044,\n                    \"call_number\": 1,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет математики[305]\",\n                            \"subject_name\": \"Алгебра\",\n                            \"teacher\": {\n                                \"id\": 1755079,\n                                \"name\": \"Іванова А. С.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"8:40\",\n                    \"time_start\": \"8:00\"\n                },\n                {\n                    \"call_id\": 9004045,\n                    \"call_number\": 2,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет української мови та літератури[301]\",\n                            \"subject_name\": \"Українська мова \",\n                            \"teacher\": {\n                                \"id\": 1755119,\n                                \"name\": \"Петрова О. М.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"9:30\",\n                    \"time_start\": \"8:50\"\n                },\n                {\n                    \"call_id\": 9004042,\n                    \"call_number\": 3,\n                    \"subjects\": [\n                        {\n                            \"room\": \"ГПД[12]\",\n                            \"subject_name\": \"Хімія\",\n                            \"teacher\": {\n                                \"id\": 5646552,\n                                \"name\": \"Гончаров Н. О.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"10:20\",\n                    \"time_start\": \"9:40\"\n                },\n                {\n                    \"call_id\": 9004043,\n                    \"call_number\": 4,\n                    \"subjects\": [\n                        {\n                            \"room\": \"кабінет біології[208]\",\n                            \"subject_name\": \"Біологія і екологія\",\n                            \"teacher\": {\n                                \"id\": 1755009,\n                                \"name\": \"Федорова В. П.\"\n                            }\n                        }\n                    ],\n                    \"time_end\": \"12:00\",\n                    \"time_start\": \"11:20\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
 		}
 	],
 	"event": [

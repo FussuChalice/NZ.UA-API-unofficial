@@ -171,6 +171,14 @@ pre code {
             <a href="#request-subject-grades">subject-grades</a>
         </li>
         
+        <li>
+            <a href="#request-missed-lessons">missed-lessons</a>
+        </li>
+        
+        <li>
+            <a href="#request-timetable">timetable</a>
+        </li>
+        
         
     </ul>
 </div>
@@ -242,7 +250,7 @@ Accept-Charset: utf-8, *;q=0.8
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-authorization-responses-bc40a3bb-9f0f-4f08-b240-74002fa71337" data-toggle="tab">
+                                <a href="#request-authorization-responses-e28eeeb7-c032-49a1-9a19-7e8454515715" data-toggle="tab">
                                     
                                     Response
                                     
@@ -252,7 +260,7 @@ Accept-Charset: utf-8, *;q=0.8
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-authorization-responses-bc40a3bb-9f0f-4f08-b240-74002fa71337">
+                            <div class="tab-pane active" id="request-authorization-responses-e28eeeb7-c032-49a1-9a19-7e8454515715">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -335,7 +343,7 @@ Host: api-mobile.nz.ua
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-student-performance-responses-88751110-8bc1-4156-bac3-068a4295f409" data-toggle="tab">
+                                <a href="#request-student-performance-responses-0bdc6fce-c693-4d9b-96e1-33c07846e786" data-toggle="tab">
                                     
                                     Response
                                     
@@ -345,7 +353,7 @@ Host: api-mobile.nz.ua
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-student-performance-responses-88751110-8bc1-4156-bac3-068a4295f409">
+                            <div class="tab-pane active" id="request-student-performance-responses-0bdc6fce-c693-4d9b-96e1-33c07846e786">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -601,7 +609,7 @@ Content-Type: application/json
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-diary-responses-3683ed82-56f7-4fb8-aca1-82622d7bb523" data-toggle="tab">
+                                <a href="#request-diary-responses-d507a661-fd11-4201-b8ec-cf1ebede4009" data-toggle="tab">
                                     
                                     Response
                                     
@@ -611,7 +619,7 @@ Content-Type: application/json
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-diary-responses-3683ed82-56f7-4fb8-aca1-82622d7bb523">
+                            <div class="tab-pane active" id="request-diary-responses-d507a661-fd11-4201-b8ec-cf1ebede4009">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -709,7 +717,7 @@ Host: api-mobile.nz.ua
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-subject-grades-responses-2d0f948c-555a-4573-b650-122557cec18e" data-toggle="tab">
+                                <a href="#request-subject-grades-responses-0a650488-05af-4976-a991-f55dedda32c6" data-toggle="tab">
                                     
                                     Response
                                     
@@ -719,7 +727,7 @@ Host: api-mobile.nz.ua
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-subject-grades-responses-2d0f948c-555a-4573-b650-122557cec18e">
+                            <div class="tab-pane active" id="request-subject-grades-responses-0a650488-05af-4976-a991-f55dedda32c6">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -827,6 +835,476 @@ Host: api-mobile.nz.ua
         }
     ],
     "number_missed_lessons": 0
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-missed-lessons">
+                        missed-lessons
+                        <a href="#request-missed-lessons"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div><p>Get missed lessons info</p>
+</div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-missed-lessons-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-missed-lessons-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-missed-lessons-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -d '{
+    "end_date": "2024-01-31",
+    "start_date": "2024-01-01",
+    "student_id": 99999999 
+}' "https://api-mobile.nz.ua/v1/schedule/missed-lessons"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-missed-lessons-example-http">
+                                <pre><code class="hljs http">POST /v1/schedule/missed-lessons HTTP/1.1
+Host: api-mobile.nz.ua
+
+{
+    "end_date": "2024-01-31",
+    "start_date": "2024-01-01",
+    "student_id": 99999999 
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-missed-lessons-responses-b967b7dc-c4e1-4bed-a9d6-cf65439b7235" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-missed-lessons-responses-b967b7dc-c4e1-4bed-a9d6-cf65439b7235">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "error_message": "",
+    "missed_lessons": [
+        {
+            "lesson_date": "2024-01-31",
+            "lesson_id": "23906864",
+            "lesson_number": "6",
+            "subject": "Фізична культура"
+        },
+        {
+            "lesson_date": "2024-01-09",
+            "lesson_id": "22019392",
+            "lesson_number": "8",
+            "subject": "Захист України"
+        }
+    ]
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-timetable">
+                        timetable
+                        <a href="#request-timetable"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-timetable-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-timetable-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-timetable-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -d '{
+    "end_date": "2024-05-19",
+    "start_date": "2024-05-13",
+    "student_id": 99999999
+}' "https://api-mobile.nz.ua/v1/schedule/timetable"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-timetable-example-http">
+                                <pre><code class="hljs http">POST /v1/schedule/timetable HTTP/1.1
+Host: api-mobile.nz.ua
+
+{
+    "end_date": "2024-05-19",
+    "start_date": "2024-05-13",
+    "student_id": 99999999
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-timetable-responses-67b5021b-3409-4cc7-98e0-cab1ed2ab71d" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-timetable-responses-67b5021b-3409-4cc7-98e0-cab1ed2ab71d">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "dates": [
+        {
+            "calls": [
+                {
+                    "call_id": 9004044,
+                    "call_number": 1,
+                    "subjects": [
+                        {
+                            "room": "кабінет математики[305]",
+                            "subject_name": "Геометрія",
+                            "teacher": {
+                                "id": 1755079,
+                                "name": "Іванова А. С."
+                            }
+                        }
+                    ],
+                    "time_end": "8:40",
+                    "time_start": "8:00"
+                },
+                {
+                    "call_id": 9004045,
+                    "call_number": 2,
+                    "subjects": [
+                        {
+                            "room": "кабінет української мови та літератури[301]",
+                            "subject_name": "Українська мова ",
+                            "teacher": {
+                                "id": 1755119,
+                                "name": "Петрова О. М."
+                            }
+                        }
+                    ],
+                    "time_end": "9:30",
+                    "time_start": "8:50"
+                },
+                {
+                    "call_id": 9004042,
+                    "call_number": 3,
+                    "subjects": [
+                        {
+                            "room": "зарубіжної літератури[302а]",
+                            "subject_name": "Зарубіжна література",
+                            "teacher": {
+                                "id": 1755014,
+                                "name": "Сидорова Н. М."
+                            }
+                        }
+                    ],
+                    "time_end": "10:20",
+                    "time_start": "9:40"
+                },
+                {
+                    "call_id": 9004043,
+                    "call_number": 4,
+                    "subjects": [
+                        {
+                            "room": "кабінет української мови та літератури[301]",
+                            "subject_name": "Українська  література",
+                            "teacher": {
+                                "id": 1755119,
+                                "name": "Петрова О. М."
+                            }
+                        }
+                    ],
+                    "time_end": "12:00",
+                    "time_start": "11:20"
+                },
+                {
+                    "call_id": 9004047,
+                    "call_number": 6,
+                    "subjects": [
+                        {
+                            "room": "кабінет фізики[206]",
+                            "subject_name": "Фізика і астрономія",
+                            "teacher": {
+                                "id": 1754964,
+                                "name": "Кузнецова О. О."
+                            }
+                        }
+                    ],
+                    "time_end": "13:40",
+                    "time_start": "13:00"
+                },
+                {
+                    "call_id": 9004048,
+                    "call_number": 7,
+                    "subjects": [
+                        {
+                            "room": "зарубіжної літератури[302а]",
+                            "subject_name": "Мистецтво ",
+                            "teacher": {
+                                "id": 1755014,
+                                "name": "Сидорова Н. М."
+                            }
+                        }
+                    ],
+                    "time_end": "14:30",
+                    "time_start": "13:50"
+                },
+                {
+                    "call_id": 9004059,
+                    "call_number": 10,
+                    "subjects": [
+                        {
+                            "room": "кабінет біології[208]",
+                            "subject_name": "Виховна робота",
+                            "teacher": {
+                                "id": 1755009,
+                                "name": "Федорова В. П."
+                            }
+                        }
+                    ],
+                    "time_end": "17:00",
+                    "time_start": "16:20"
+                }
+            ],
+            "date": "2024-05-13"
+        },
+        {
+            "calls": [
+                {
+                    "call_id": 9004044,
+                    "call_number": 1,
+                    "subjects": [
+                        {
+                            "room": "кабінет математики[305]",
+                            "subject_name": "Алгебра",
+                            "teacher": {
+                                "id": 1755079,
+                                "name": "Іванова А. С."
+                            }
+                        }
+                    ],
+                    "time_end": "8:40",
+                    "time_start": "8:00"
+                },
+                {
+                    "call_id": 9004045,
+                    "call_number": 2,
+                    "subjects": [
+                        {
+                            "room": "кабінет історії[203]",
+                            "subject_name": "Історія України",
+                            "teacher": {
+                                "id": 1754999,
+                                "name": "Соколова Л. С."
+                            }
+                        }
+                    ],
+                    "time_end": "9:30",
+                    "time_start": "8:50"
+                },
+                {
+                    "call_id": 9004042,
+                    "call_number": 3,
+                    "subjects": [
+                        {
+                            "room": "кабінет математики[305]",
+                            "subject_name": "Алгебра",
+                            "teacher": {
+                                "id": 1755079,
+                                "name": "Іванова А. С."
+                            }
+                        }
+                    ],
+                    "time_end": "10:20",
+                    "time_start": "9:40"
+                },
+                {
+                    "call_id": 9004043,
+                    "call_number": 4,
+                    "subjects": [
+                        {
+                            "room": "кабінет математики[305]",
+                            "subject_name": "Геометрія",
+                            "teacher": {
+                                "id": 1755079,
+                                "name": "Іванова А. С."
+                            }
+                        }
+                    ],
+                    "time_end": "12:00",
+                    "time_start": "11:20"
+                },
+                {
+                    "call_id": 9004046,
+                    "call_number": 5,
+                    "subjects": [
+                        {
+                            "room": "кабінет історії[203]",
+                            "subject_name": "Громадянська освіта",
+                            "teacher": {
+                                "id": 1754999,
+                                "name": "Соколова Л. С."
+                            }
+                        }
+                    ],
+                    "time_end": "12:50",
+                    "time_start": "12:10"
+                },
+                {
+                    "call_id": 9004047,
+                    "call_number": 6,
+                    "subjects": [
+                        {
+                            "room": "кабінет географії[306]",
+                            "subject_name": "Географія",
+                            "teacher": {
+                                "id": 5530201,
+                                "name": "Новикова С. І."
+                            }
+                        }
+                    ],
+                    "time_end": "13:40",
+                    "time_start": "13:00"
+                },
+                {
+                    "call_id": 9004048,
+                    "call_number": 7,
+                    "subjects": [
+                        {
+                            "room": "спортивна зала[1]",
+                            "subject_name": "Фізична культура",
+                            "teacher": {
+                                "id": 5392214,
+                                "name": "Большой М. І."
+                            }
+                        }
+                    ],
+                    "time_end": "14:30",
+                    "time_start": "13:50"
+                }
+            ],
+            "date": "2024-05-14"
+        },
+        {
+            "calls": [
+                {
+                    "call_id": 9004044,
+                    "call_number": 1,
+                    "subjects": [
+                        {
+                            "room": "кабінет математики[305]",
+                            "subject_name": "Алгебра",
+                            "teacher": {
+                                "id": 1755079,
+                                "name": "Іванова А. С."
+                            }
+                        }
+                    ],
+                    "time_end": "8:40",
+                    "time_start": "8:00"
+                },
+                {
+                    "call_id": 9004045,
+                    "call_number": 2,
+                    "subjects": [
+                        {
+                            "room": "кабінет української мови та літератури[301]",
+                            "subject_name": "Українська мова ",
+                            "teacher": {
+                                "id": 1755119,
+                                "name": "Петрова О. М."
+                            }
+                        }
+                    ],
+                    "time_end": "9:30",
+                    "time_start": "8:50"
+                },
+                {
+                    "call_id": 9004042,
+                    "call_number": 3,
+                    "subjects": [
+                        {
+                            "room": "ГПД[12]",
+                            "subject_name": "Хімія",
+                            "teacher": {
+                                "id": 5646552,
+                                "name": "Гончаров Н. О."
+                            }
+                        }
+                    ],
+                    "time_end": "10:20",
+                    "time_start": "9:40"
+                },
+                {
+                    "call_id": 9004043,
+                    "call_number": 4,
+                    "subjects": [
+                        {
+                            "room": "кабінет біології[208]",
+                            "subject_name": "Біологія і екологія",
+                            "teacher": {
+                                "id": 1755009,
+                                "name": "Федорова В. П."
+                            }
+                        }
+                    ],
+                    "time_end": "12:00",
+                    "time_start": "11:20"
+                }
+            ]
+        }
+    ]
 }</code></pre>
                                     </td></tr>
                                     
