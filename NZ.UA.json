@@ -321,9 +321,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/v1/schedule/subject-grades",
+					"raw": "https://api-mobile.nz.ua/v1/schedule/subject-grades",
+					"protocol": "https",
 					"host": [
-						"{{base_url}}"
+						"api-mobile",
+						"nz",
+						"ua"
 					],
 					"path": [
 						"v1",
