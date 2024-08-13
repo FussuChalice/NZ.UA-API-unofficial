@@ -43,9 +43,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/v1/user/login",
+					"raw": "https://api-mobile.nz.ua/v1/user/login",
+					"protocol": "https",
 					"host": [
-						"{{base_url}}"
+						"api-mobile",
+						"nz",
+						"ua"
 					],
 					"path": [
 						"v1",
@@ -146,9 +149,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/v1/schedule/student-performance",
+					"raw": "https://api-mobile.nz.ua/v1/schedule/student-performance",
+					"protocol": "https",
 					"host": [
-						"{{base_url}}"
+						"api-mobile",
+						"nz",
+						"ua"
 					],
 					"path": [
 						"v1",
@@ -234,9 +240,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/v1/schedule/diary",
+					"raw": "https://api-mobile.nz.ua/v1/schedule/diary",
+					"protocol": "https",
 					"host": [
-						"{{base_url}}"
+						"api-mobile",
+						"nz",
+						"ua"
 					],
 					"path": [
 						"v1",

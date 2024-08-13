@@ -219,11 +219,11 @@ pre code {
                                 <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/json" -H "Accept-Encoding: application/gzip" -H "Connection: Keep-Alive" -H "Accept-Charset: utf-8, *;q=0.8" -d '{
     "password": "password",
     "username": "username"
-}' "{{base_url}}/v1/user/login"</code></pre>
+}' "https://api-mobile.nz.ua/v1/user/login"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-authorization-example-http">
-                                <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/v1/user/login HTTP/1.1
-Host: 
+                                <pre><code class="hljs http">POST /v1/user/login HTTP/1.1
+Host: api-mobile.nz.ua
 Content-Type: application/json
 Accept-Encoding: application/gzip
 Connection: Keep-Alive
@@ -242,7 +242,7 @@ Accept-Charset: utf-8, *;q=0.8
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-authorization-responses-88f01bed-6134-4062-aecd-ed09c28737eb" data-toggle="tab">
+                                <a href="#request-authorization-responses-bc40a3bb-9f0f-4f08-b240-74002fa71337" data-toggle="tab">
                                     
                                     Response
                                     
@@ -252,7 +252,7 @@ Accept-Charset: utf-8, *;q=0.8
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-authorization-responses-88f01bed-6134-4062-aecd-ed09c28737eb">
+                            <div class="tab-pane active" id="request-authorization-responses-bc40a3bb-9f0f-4f08-b240-74002fa71337">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -315,11 +315,11 @@ Accept-Charset: utf-8, *;q=0.8
     "end_date": "2024-02-29",
     "start_date": "2024-02-01",
     "student_id": 111111111
-}' "{{base_url}}/v1/schedule/student-performance"</code></pre>
+}' "https://api-mobile.nz.ua/v1/schedule/student-performance"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-student-performance-example-http">
-                                <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/v1/schedule/student-performance HTTP/1.1
-Host: 
+                                <pre><code class="hljs http">POST /v1/schedule/student-performance HTTP/1.1
+Host: api-mobile.nz.ua
 
 {
     "end_date": "2024-02-29",
@@ -335,7 +335,7 @@ Host:
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-student-performance-responses-482591fc-8f30-4afc-b3ff-7bd3875add64" data-toggle="tab">
+                                <a href="#request-student-performance-responses-88751110-8bc1-4156-bac3-068a4295f409" data-toggle="tab">
                                     
                                     Response
                                     
@@ -345,7 +345,7 @@ Host:
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-student-performance-responses-482591fc-8f30-4afc-b3ff-7bd3875add64">
+                            <div class="tab-pane active" id="request-student-performance-responses-88751110-8bc1-4156-bac3-068a4295f409">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -580,11 +580,11 @@ Host:
     "end_date": "2024-07-07",
     "start_date": "2024-07-01",
     "student_id": 11111111
-}' "{{base_url}}/v1/schedule/diary"</code></pre>
+}' "https://api-mobile.nz.ua/v1/schedule/diary"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-diary-example-http">
-                                <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/v1/schedule/diary HTTP/1.1
-Host: 
+                                <pre><code class="hljs http">POST /v1/schedule/diary HTTP/1.1
+Host: api-mobile.nz.ua
 Content-Type: application/json
 
 {
@@ -601,7 +601,7 @@ Content-Type: application/json
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-diary-responses-059cf9a1-def2-42be-a98f-13ce54fb10c5" data-toggle="tab">
+                                <a href="#request-diary-responses-3683ed82-56f7-4fb8-aca1-82622d7bb523" data-toggle="tab">
                                     
                                     Response
                                     
@@ -611,7 +611,7 @@ Content-Type: application/json
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-diary-responses-059cf9a1-def2-42be-a98f-13ce54fb10c5">
+                            <div class="tab-pane active" id="request-diary-responses-3683ed82-56f7-4fb8-aca1-82622d7bb523">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
@@ -709,7 +709,7 @@ Host: api-mobile.nz.ua
                         <ul class="nav nav-tabs" role="tablist">
                             
                             <li role="presentation" class="active">
-                                <a href="#request-subject-grades-responses-9ca55e9f-35b4-4fe0-8058-c25a426179be" data-toggle="tab">
+                                <a href="#request-subject-grades-responses-2d0f948c-555a-4573-b650-122557cec18e" data-toggle="tab">
                                     
                                     Response
                                     
@@ -719,7 +719,7 @@ Host: api-mobile.nz.ua
                         </ul>
                         <div class="tab-content">
                             
-                            <div class="tab-pane active" id="request-subject-grades-responses-9ca55e9f-35b4-4fe0-8058-c25a426179be">
+                            <div class="tab-pane active" id="request-subject-grades-responses-2d0f948c-555a-4573-b650-122557cec18e">
                                 <table class="table table-bordered">
                                     <tr><th style="width: 20%;">Status</th><td>0 </td></tr>
                                     
